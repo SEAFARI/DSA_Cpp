@@ -29,14 +29,39 @@ vector<int> newVec1 = Vec;
 
     vector<string> vec2(6,"egg");  // egg is stored 6 times
 
-    vector<int> vec3(12); // 0 is stored 12 times
+    vector<int> vec4(12); // 0 is stored 12 times
 
 
     vector<int> vec6(2,3);  // 3 is stored 2 times
-    vector<int> vec6{2,3};  // 2 and 3 is stored in vec6
+    vector<int> vec_new1{2,3};  // 2 and 3 is stored in vec6
 
     vector<string> vec7{10};  //v7 has ten default elements bc we have given the type as string. "10" like would store it
 
-    
+
+
+// 4. Adding Elements to a vector
+
+    /*when we have small elements, use vector initialization
+    for large numbers: create empty vector 
+                        add elements using push_back at runtime
+                        
+        push_back add the new element to the back of the vector. */
+
+vector<int> new_vec;
+for(int i=0;i<=100;i++)
+    new_vec.push_back(i);
+for(int i :new_vec)
+    cout<<i<< endl;
+
+    //adding string elements 
+
+string word;
+vector<string> mytext;
+
+while(cin>>word)
+    mytext.push_back(word);
+for(string i:mytext)
+    cout<<i<<endl;
+
 
 }
